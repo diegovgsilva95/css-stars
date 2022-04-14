@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.rating {
+  position: absolute;
+  display: flex;
+}
+.stars {
+  display: inline-flex;
+}
+.star {
+  display: inline-block;
+}
+.starpoints {
+  position: relative;
+  height: 22px;
+  width: 22px;
+}
+.starpoint {
+  background-color: #cccccc;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  display: block;
+}
+
+.starpoint:nth-child(1) {
+  transform: translate(8px, 8px) rotate(0deg) scaleY(1.5) translateY(-3.5px) rotate(45deg);
+}
+.starpoint:nth-child(2) {
+  transform: translate(8px, 8px) rotate(72deg) scaleY(1.5) translateY(-3.5px) rotate(45deg);
+}
+.starpoint:nth-child(3) {
+  transform: translate(8px, 8px) rotate(144deg) scaleY(1.5) translateY(-3.5px) rotate(45deg);
+}
+.starpoint:nth-child(4) {
+  transform: translate(8px, 8px) rotate(216deg) scaleY(1.5) translateY(-3.5px) rotate(45deg);
+}
+.starpoint:nth-child(5) {
+  transform: translate(8px, 8px) rotate(288deg) scaleY(1.5) translateY(-3.5px) rotate(45deg);
+}
+
+/* 4 => How many stars */
+.star:nth-child(n):nth-child(-n+4) .starpoint {
+  background-color: #ffcc00;
+}
